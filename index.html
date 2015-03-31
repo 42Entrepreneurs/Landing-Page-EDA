@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr" ng-app="42e">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
+	<!-- Stylesheets -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="styles/reset.css" />
+	<link rel="stylesheet" type="text/css" href="styles/main.css" />
+
+	<!-- Segment (Analytics + RUM) -->
+
+	<script type="text/javascript">
+		!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+		analytics.load("xFn580DF8hoFGjLMI30zCZrVfkcsgNZA");
+		analytics.page()
+		}}();
+	</script>
+
+	<!-- External JS -->
+	<script src="js/countdown.min.js"></script>
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+
+	<!-- 42e App -->
+	<script src="js/42e.js"></script>
+	<title>EDA x 42e</title>
+</head>
+<body>
+	<div class="bg-video">
+		<iframe id="video-player" width="100%" height="100%" src="https://www.youtube.com/embed/2_Z6m21a7fU?autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="bg-overlay"></div>
+		<div class="main-wrapper">
+			<p class="main-title">EDA x 42e</p>
+			<p class="projects">Temps restant pour vous <span class="w300">inscrire</span></p>
+			<p class="countdown" ng-controller="countdownController">
+				<span ng-show="timespan.days" class="w300">{{timespan.days}}</span><span ng-show="timespan.days" class="w100"> jours, </span>
+				<span ng-show="timespan.hours" class="w300">{{timespan.hours}}</span><span ng-show="timespan.hours" class="w100"> heures, </span>
+				<span ng-show="timespan.minutes" class="w300">{{timespan.minutes}}</span><span ng-show="timespan.minutes" class="w100"> minutes, </span>
+				<span ng-show="timespan.seconds" class="w300">{{timespan.seconds}}</span><span ng-show="timespan.seconds" class="w100"> secondes</span>
+			</p>
+			<a class="apply-button" href="https://docs.google.com/forms/d/161Gddb6m0lk6ShMSI0Tscx9LBeZuM_wB-RXDHuI74wo/viewform">Candidater</a><br>
+			<a class="apply-button" href="https://www.youtube.com/watch?v=2_Z6m21a7fU">Voir la vidéo</a>
+			<div>
+				<a class="partner-logo size1of3" href="http://www.thefamily.co"></a><!-- @WP
+				--><a class="partner-logo size1of3" href="http://letudiantdelannee.com"></a><!-- @WP
+				--><a class="partner-logo size1of3" href></a>
+			</div>
+	</div>
+	<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

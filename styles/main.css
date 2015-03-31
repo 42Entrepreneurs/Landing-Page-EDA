@@ -1,0 +1,138 @@
+p {
+	width: 90%;
+	max-width: 1160px;
+	font-family: 'Lato';
+	text-align: center;
+	color: white;
+	margin: 0 auto;
+}
+
+.bg-video {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: -100;
+	width: 100%;
+	height: 100%;
+}
+
+.bg-overlay {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: -99;
+	width: 100%;
+	height: 100%;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAADklEQVQIW2NggID/cAIADwMB/zSts64AAAAASUVORK5CYII=') repeat;
+}
+
+.main-wrapper {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	/* VCentering */
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.main-title {
+	font-size: 5rem;
+	font-weight: 100;
+}
+
+.projects {
+	margin-top: 10px;
+	font-size: 2.5rem;
+	font-weight: 100;
+	color: rgb(234, 136, 37);
+}
+
+.countdown {
+	font-size: 3.6rem;
+	margin-top: 20px;
+}
+
+.w300 {
+	font-weight: 300;
+}
+
+.w100 {
+	font-weight: 100;
+}
+
+.apply-button {
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 40px auto 0 auto;
+	padding: 14px 28px;
+	text-decoration: none;
+	font-family: 'Lato';
+	font-size: 1rem;
+	font-size: 100;
+	color: white;
+	border-radius: 4px;
+	border: 1px solid rgb(234, 136, 37);
+	background: rgba(234, 136, 37, 0.4);
+	transition: all 0.2s;
+}
+
+.apply-button:hover {
+	background: rgb(234, 136, 37);
+}
+
+.size1of3 {
+	display: inline-block;
+	width:33.33%;
+}
+
+.partner-logo {
+	height: 126px;
+}
+
+.partner-logo:nth-of-type(1) {
+	margin-top: 40px;
+	background: url('../images/thefamily.png') no-repeat center;
+	background-size: contain;
+}
+
+.partner-logo:nth-of-type(2) {
+	background: url('../images/eda.png') no-repeat center;
+	background-size: contain;
+}
+
+.partner-logo:nth-of-type(3) {
+	background: url('../images/42e.png') no-repeat center;
+	background-size: contain;
+}
+
+.disabled {
+	cursor:not-allowed;
+}
+
+@media all and (max-device-width: 480px) {
+
+	.main-wrapper {
+		position: static;
+		top: 0;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	.bg-video {
+		background: url('../images/mobilebg.jpg') no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	#video-player {
+		display: none;
+	}
+
+    .size1of3 {
+		width: 100%;
+	}
+}
